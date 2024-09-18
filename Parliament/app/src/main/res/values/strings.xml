@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Parliament</string>
+    <string name="heteka_id">ID</string>
+    <string name="seat_number">Seat number</string>
+    <string name="lastname">LastName</string>
+    <string name="name">Name</string>
+    <string name="party">Party</string>
+    <string name="minister">Minister</string>
+    <string name="picture_url">Image</string>
+</resources>

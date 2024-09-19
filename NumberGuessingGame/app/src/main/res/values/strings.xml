@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">NumberGuessingGame</string>
+    <string name="enter_number_label">Enter number</string>
+    <string name="guess_the_number_in_given_range">Guess the number in %1$d..%2$d</string>
+    <string name="error_number_out_of_range"> Number is out of a given range.\nPlease enter a number between %1$d and %2$d</string>
+    <string name="guess_result_high">Too high!</string>
+    <string name="guess_result_low">Too low!</string>
+    <string name="guess_result_hit">You guessed it!\nYour guesses: %1$s</string>
+    <string name="make_guess_button">Make guess!</string>
+
+</resources>

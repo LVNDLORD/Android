@@ -137,7 +137,7 @@ class MainActivity : ComponentActivity() {
 
     private suspend fun playAudio(inputStream: FileInputStream) = withContext(Dispatchers.IO) {
         val minBufferSize = AudioTrack.getMinBufferSize(
-            44100, AudioFormat.CHANNEL_OUT_STEREO, AudioFormat.ENCODING_PCM_16BIT
+            44100, AudioFormat.CHANNEL_OUT_MONO, AudioFormat.ENCODING_PCM_16BIT
         )
 
         val audioTrack = AudioTrack.Builder()
@@ -150,8 +150,8 @@ class MainActivity : ComponentActivity() {
             .setAudioFormat(
                 AudioFormat.Builder()
                     .setEncoding(AudioFormat.ENCODING_PCM_16BIT)
-                    .setSampleRate(44100)
-                    .setChannelMask(AudioFormat.CHANNEL_OUT_STEREO)
+                    .setSampleRate(44100)  // Make sure this matches the recording sample rate
+                    .setChannelMask(AudioFormat.CHANNEL_OUT_MONO) // Use MONO if recorded in MONO
                     .build()
             )
             .setBufferSizeInBytes(minBufferSize)
@@ -174,6 +174,7 @@ class MainActivity : ComponentActivity() {
             audioTrack.release()
         }
     }
+
 }
 
 @Composable
